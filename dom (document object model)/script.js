@@ -36,3 +36,43 @@ DOM manipulation -->
     textContent : return texual content even for hidden elements
     
 */
+
+
+/*
+    Attributes -->
+
+    getAttribute(attr) - to get attribute value
+    setAttribute(attr,value) - to set attribute value
+ */
+
+
+let para = document.querySelector("p");
+console.log(para.setAttribute("class","para"));
+console.log(para.getAttribute("class"));
+
+
+//style
+
+let h1 = document.querySelector("#heading");
+console.log(h1.style);
+h1.style.backgroundColor = "red";
+h1.style.fontSize = "50px";
+
+
+/*
+ 
+    Insert Element -->
+     
+    let el = document.creteElement("div");
+
+    node.append(el) - add at the end of node (inside)
+    node.prepend(el) - adds at the start of node (inside)
+    node.before(el) - adds before the node (outside)
+    node.after(el) - adds after the node (outside)
+ */
+
+    let newBtn = document.createElement("button");
+    newBtn.innerText = "click me";
+
+    let mainheading = document.querySelector("h1");
+    mainheading.after(newBtn);
